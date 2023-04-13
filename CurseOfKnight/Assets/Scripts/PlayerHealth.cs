@@ -1,21 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int Health;
+    public int health;
+    public int maxHealth;
+    public TMP_Text hpBar;
 
-    void Update()
+    private void Awake()
     {
-        if (Health <=0)
+        hpBar.text = "" + health;
+    }
+
+    public void TakeHit(int damage)
+    {
+        health -= damage;
+        hpBar.text = "" + health;
+
+        if (health <= 0)
         {
             Destroy(gameObject);
+            Destroy(hpBar);
         }
     }
 
-    public void TakeDamage(int damage)
+    public void SetHealth(int bonusHealth)
     {
-        Health -= damage;
+        health += bonusHealth;
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        hpBar.text = "" + health;
     }
 }

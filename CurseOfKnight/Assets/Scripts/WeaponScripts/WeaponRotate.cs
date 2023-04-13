@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponRotate : MonoBehaviour
 {
     public float offset;
+    public SpriteRenderer spriteRenderer;
 
     void Update()
     {
@@ -17,11 +18,13 @@ public class WeaponRotate : MonoBehaviour
         if(rotateZ > 90 || rotateZ < -90)
         {
             LocalScale.y = -1f;
+            spriteRenderer.flipX = true;
         } 
         else
         {
             LocalScale.y = +1f;
-        }  
+            spriteRenderer.flipX = false;
+        }
         transform.localScale = LocalScale;
     }
     
