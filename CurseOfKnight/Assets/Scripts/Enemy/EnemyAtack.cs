@@ -6,6 +6,7 @@ public class EnemyAtack : MonoBehaviour
 {
     public float speed = 1f;
     public Transform target;
+    public Vector2 startPosition;
 
     public int collisionDamage = 10;
     public string collisionTag;
@@ -15,14 +16,21 @@ public class EnemyAtack : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    void MoveToPlayer()
+    void MoveForPlayer()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        if(target == null)
+        {
+            // transform.position = Vector2.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
     }
     
     void Update()
     {
-        MoveToPlayer();
+        MoveForPlayer();
     }
     void OnCollisionEnter2D(Collision2D other)
     {
