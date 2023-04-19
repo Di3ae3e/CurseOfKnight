@@ -8,9 +8,6 @@ public class EnemyAtack : MonoBehaviour
     public Transform target;
     public Vector2 startPosition;
 
-    public int collisionDamage = 10;
-    public string collisionTag;
-
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -34,16 +31,11 @@ public class EnemyAtack : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == collisionTag)
-        {
-            PlayerHealth health = other.gameObject.GetComponent<PlayerHealth>();
-            health.TakeHit(collisionDamage);
-            speed = 0;
-        }
+        speed = 0;
     }
     private void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.tag == collisionTag)
+        if (other.gameObject.tag == "Player")
         {
             speed = 1;
         }

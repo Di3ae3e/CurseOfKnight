@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 300893450}
   - component: {fileID: 300893453}
   - component: {fileID: 300893455}
+  - component: {fileID: 300893456}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -428,7 +429,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300893449}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b2d87d2a445d4249b2bb23caf401004, type: 3}
   m_Name: 
@@ -436,6 +437,18 @@ MonoBehaviour:
   speed: 1
   target: {fileID: 1651337563}
   startPosition: {x: 0, y: 0}
+--- !u!114 &300893456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300893449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0e3477115e0ea40ab5d1c97226ec2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   collisionDamage: 10
   collisionTag: Player
 --- !u!1 &376656404
@@ -495,7 +508,10 @@ GameObject:
   - component: {fileID: 389309357}
   - component: {fileID: 389309356}
   - component: {fileID: 389309359}
+<<<<<<< HEAD
   - component: {fileID: 389309360}
+=======
+>>>>>>> 704a3f30e25c7d3eb351a1b40f849611c2dee0ef
   m_Layer: 0
   m_Name: ArmoredGhost_0
   m_TagString: Enemy
@@ -599,6 +615,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 389309355}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: f5cd711d85c91dd4cb3a27bb17014e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -630,6 +647,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1875, y: 1.5625}
   m_EdgeRadius: 0
+=======
+  m_Script: {fileID: 11500000, guid: 0fd1162cc77d34f4ba3f9e2726720996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  stoppingDistance: 5
+  retreatDistance: 3
+  startBtwShots: 3
+  projectile: {fileID: 1323172472160160174, guid: 532b2103a5a142d46a647b94e8d84d65, type: 3}
+  Player: {fileID: 1651337563}
+>>>>>>> 704a3f30e25c7d3eb351a1b40f849611c2dee0ef
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
