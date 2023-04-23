@@ -7,13 +7,12 @@ public class EnemyAtack : MonoBehaviour
     public float speed = 1f;
     public Transform target;
     public Vector2 startPosition;
-
-    public int collisionDamage = 10;
-    public string collisionTag;
+    public SpriteRenderer enemySpriteRender;
 
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        enemySpriteRender = GetComponent<SpriteRenderer>();
     }
 
     void MoveForPlayer()
@@ -25,6 +24,14 @@ public class EnemyAtack : MonoBehaviour
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            if(transform.position.x > target.position.x)
+            {
+                enemySpriteRender.flipX = true;
+            }
+            else
+            {
+                enemySpriteRender.flipX = false;
+            }
         }
     }
     
@@ -34,16 +41,14 @@ public class EnemyAtack : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == collisionTag)
+        if (other.gameObject.tag == "Player")
         {
-            PlayerHealth health = other.gameObject.GetComponent<PlayerHealth>();
-            health.TakeHit(collisionDamage);
             speed = 0;
         }
     }
     private void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.tag == collisionTag)
+        if (other.gameObject.tag == "Player")
         {
             speed = 1;
         }
