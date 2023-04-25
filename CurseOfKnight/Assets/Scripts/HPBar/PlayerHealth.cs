@@ -6,11 +6,12 @@ using TMPro;
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
-    public int maxHealth;
+    static public int maxHealth;
     public TMP_Text hpBar;
 
     private void Awake()
     {
+        maxHealth = health;
         hpBar.text = "" + health;
     }
 
