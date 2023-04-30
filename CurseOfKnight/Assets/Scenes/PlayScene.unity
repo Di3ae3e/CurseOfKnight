@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 389309360}
   - component: {fileID: 389309361}
   m_Layer: 0
-  m_Name: ArmoredGhost_0
+  m_Name: ArmoredGhost
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,7 +636,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1875, y: 1.5625}
+    oldSize: {x: 1.125, y: 1.6875}
     newSize: {x: 1.1875, y: 1.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3768,7 +3768,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  maxHealth: 100
   hpBar: {fileID: 1105989823}
 --- !u!1 &1839937968
 GameObject:
