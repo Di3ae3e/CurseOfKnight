@@ -8,7 +8,8 @@ public class EnemyAtack : MonoBehaviour
     public Transform target;
     public Vector2 startPosition;
     public SpriteRenderer enemySpriteRender;
-
+    public Animator animator;
+    
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();

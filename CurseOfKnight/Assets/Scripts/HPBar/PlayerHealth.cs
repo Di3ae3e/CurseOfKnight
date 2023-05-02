@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     static public int maxHealth;
     public TMP_Text hpBar;
+    public Animator animator;
 
     private void Awake()
     {
