@@ -290,7 +290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: 1
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &703451297
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,18 +338,24 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: 0.013062595, y: -0.037484348}
+      - {x: 0.05129529, y: 0.002095284}
+      - {x: 0.05266545, y: 0.050573915}
+      - {x: -0.004091177, y: 0.05068218}
+      - {x: -0.059832662, y: 0.051162235}
+      - {x: -0.060199615, y: 0.0017100526}
+      - {x: -0.025492845, y: -0.03449524}
+      - {x: -0.011206162, y: -0.049415585}
+      - {x: 0.0014436147, y: -0.049109392}
 --- !u!212 &703451301
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -391,13 +396,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.13713063, g: 0.32545194, b: 0.6792453, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: e84b74b39530a1243a91e474148ea01e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -412,8 +417,8 @@ Transform:
   m_GameObject: {fileID: 703451297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.09290987, y: 1.24, z: 0}
-  m_LocalScale: {x: 0.61993, y: 0.61993, z: 0.61993}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
