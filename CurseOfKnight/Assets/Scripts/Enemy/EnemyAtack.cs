@@ -14,18 +14,19 @@ public class EnemyAtack : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemySpriteRender = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void MoveForPlayer()
     {
-        if(target == null)
+        if (target == null)
         {
-            // transform.position = Vector2.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);
+            animator.enabled = false;
         }
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-            if(transform.position.x > target.position.x)
+            if (transform.position.x > target.position.x)
             {
                 enemySpriteRender.flipX = true;
             }
@@ -44,6 +45,7 @@ public class EnemyAtack : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            animator.enabled = false;
             speed = 0;
         }
     }
@@ -51,6 +53,7 @@ public class EnemyAtack : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            animator.enabled = true;
             speed = 1;
         }
     }

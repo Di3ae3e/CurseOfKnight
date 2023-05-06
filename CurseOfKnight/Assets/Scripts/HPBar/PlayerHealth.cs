@@ -5,13 +5,15 @@ using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health;
+    private int health = 100;
     static public int maxHealth;
     public TMP_Text hpBar;
     public Animator animator;
+    public GameObject destroyEffect;
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         maxHealth = health;
         hpBar.text = "" + health;
     }
@@ -23,7 +25,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            // сделай анимацию
+
+
             Destroy(hpBar);
         }
     }

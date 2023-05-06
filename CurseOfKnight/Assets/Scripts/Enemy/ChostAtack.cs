@@ -24,10 +24,16 @@ public class ChostAtack : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
         Vector3 relativePosition = player.position - transform.position;
-        
-        if(transform.position.x ==  target.x && transform.position.y == target.y)
+        if(target == null)
         {
             Destroy(gameObject);
+        }
+        else
+        {
+            if (transform.position.x == target.x && transform.position.y == target.y)
+            {
+                Destroy(gameObject);
+            }
         }
 
         if(transform.position.x > target.x) { projectileRender.flipX = true; }
