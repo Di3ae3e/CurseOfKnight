@@ -3576,11 +3576,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 995071385203806109, guid: 08230cb82fa9da14585101484e80cb21, type: 3}
   m_PrefabInstance: {fileID: 995071386849896134}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &1757603797 stripped
-Animation:
-  m_CorrespondingSourceObject: {fileID: 2666719903534775686, guid: 08230cb82fa9da14585101484e80cb21, type: 3}
-  m_PrefabInstance: {fileID: 995071386849896134}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1839937968
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,7 +4794,7 @@ PrefabInstance:
     - target: {fileID: 995071385203806104, guid: 08230cb82fa9da14585101484e80cb21, type: 3}
       propertyPath: animOfDeath
       value: 
-      objectReference: {fileID: 1757603797}
+      objectReference: {fileID: 0}
     - target: {fileID: 995071385203806109, guid: 08230cb82fa9da14585101484e80cb21, type: 3}
       propertyPath: m_RootOrder
       value: 3

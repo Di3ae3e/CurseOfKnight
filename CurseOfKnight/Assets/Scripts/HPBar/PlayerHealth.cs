@@ -26,8 +26,6 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             // сделай анимацию
-
-
             Destroy(hpBar);
         }
     }

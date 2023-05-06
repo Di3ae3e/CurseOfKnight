@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAtack : MonoBehaviour
+public class SkellyAtack : MonoBehaviour
 {
     public float speed = 1f;
     public Transform target;

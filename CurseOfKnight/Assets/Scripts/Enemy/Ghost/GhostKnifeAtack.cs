@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class ChostAtack : MonoBehaviour
+public class GhostKnifeAtack : MonoBehaviour
 {
     public float speed;
 
@@ -24,26 +25,18 @@ public class ChostAtack : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
         Vector3 relativePosition = player.position - transform.position;
+
         if(target == null)
-        {
             Destroy(gameObject);
-        }
         else
         {
             if (transform.position.x == target.x && transform.position.y == target.y)
-            {
                 Destroy(gameObject);
-            }
         }
-
-        if(transform.position.x > target.x) { projectileRender.flipX = true; }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
-        {
             Destroy(gameObject);
-        }
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,6 +24,7 @@ public class GhostEnemy : MonoBehaviour
 
     private void Update()
     {
+        // Движение призрака
         if(Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
@@ -46,6 +47,7 @@ public class GhostEnemy : MonoBehaviour
             enemySpriteRender.flipX = false;
         }
 
+        // Стрельба по рыцарю
         if(timeBtwShots <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
