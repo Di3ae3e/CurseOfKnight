@@ -24,24 +24,27 @@ public class GhostEnemy : MonoBehaviour
 
     private void Update()
     {
-        if(player.position == null)
+        // Движение призрака
+        if(Vector2.Distance(transform.position, player.position) > stoppingDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
+        else if(Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
         {
             transform.position = this.transform.position;
         }
+        else if(Vector2.Distance(transform.position, player.position) < retreatDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+        }
+
+        if(transform.position.x > player.position.x)
+        {
+            enemySpriteRender.flipX = true;
+        }
         else
         {
-            // Движение призрака
-            if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
-                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
-                transform.position = this.transform.position;
-            else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
-                transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
-
-            if (transform.position.x > player.position.x)
-                enemySpriteRender.flipX = true;
-            else
-                enemySpriteRender.flipX = false;
+            enemySpriteRender.flipX = false;
         }
 
         // Стрельба по рыцарю

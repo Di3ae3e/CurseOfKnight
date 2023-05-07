@@ -9,16 +9,13 @@ public class PlayerHealth : MonoBehaviour
     static public int maxHealth;
     public TMP_Text hpBar;
     public Animator animator;
-
-    private UnityEngine.Object explosion;
+    public GameObject destroyEffect;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         maxHealth = health;
         hpBar.text = "" + health;
-
-        explosion = Resources.Load("Explosion");
     }
 
     public void TakeHit(int damage)
@@ -28,9 +25,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            GameObject explosionRef = (GameObject)Instantiate(explosion);
-            explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Destroy(gameObject);
+            // сделай анимацию
             Destroy(hpBar);
         }
     }
