@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2cefccc62f297c5418dc816821601e7a
+guid: 0d158c02360d11d4ebaca0c79f192bed
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,64 +117,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flags_0
+      name: NewTileColor_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 19
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e3f638e05a9b5b4f90968aa3b55dafc
-      internalID: -2071440553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flags_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 19
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61f88460f05364e42a9159aa4853aa57
-      internalID: 982063095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flags_2
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 1
+        x: 10
+        y: 48
         width: 16
-        height: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48fdd0aae51500843ac10cd50b7280ef
-      internalID: 9049981
+      spriteID: 756b102f61de9d641bfd84681ffa7e39
+      internalID: 1228336697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileColor_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974a6df0b6249204cbc3d368b4e7e6ed
+      internalID: 1119732489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileColor_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0131b528eb2860e4ea3ed62f21f4f1f2
+      internalID: 1881573834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileColor_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d46e4330ee39464aa985e806dbc3923
+      internalID: 107579082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileColor_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7713fc2b45a475f418f56467a6fdbaa6
+      internalID: 1825941824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileColor_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 14
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b5746e15421ec4e985ae0ff40dd60f
+      internalID: 1316719657
       vertices: []
       indices: 
       edges: []
@@ -190,9 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Flags_0: -2071440553
-      Flags_1: 982063095
-      Flags_2: 9049981
+      NewTileColor_0: 1228336697
+      NewTileColor_1: 1119732489
+      NewTileColor_2: 1881573834
+      NewTileColor_3: 107579082
+      NewTileColor_4: 1825941824
+      NewTileColor_5: 1316719657
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
