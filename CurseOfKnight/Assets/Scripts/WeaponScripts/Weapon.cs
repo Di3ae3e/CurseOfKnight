@@ -10,9 +10,12 @@ public class Weapon : MonoBehaviour
     public float StartTimeFire;
     private float TimeFire;
 
+    private AudioSource audioSource;
+
     void Start()
     {
         TimeFire = StartTimeFire;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -22,6 +25,7 @@ public class Weapon : MonoBehaviour
             if(TimeFire <= 0)
             {
                 Instantiate(projectile, projectileTransform.position, transform.rotation);
+                audioSource.Play();
                 TimeFire = StartTimeFire;
             } 
             else

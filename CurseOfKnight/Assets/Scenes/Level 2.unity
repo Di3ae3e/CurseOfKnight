@@ -5694,10 +5694,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1105989823}
     - target: {fileID: 995071385203806104, guid: 08230cb82fa9da14585101484e80cb21, type: 3}
-      propertyPath: animOfDeath
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 995071385203806104, guid: 08230cb82fa9da14585101484e80cb21, type: 3}
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 1877021076}
@@ -5711,7 +5707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 995071385203806109, guid: 08230cb82fa9da14585101484e80cb21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.35
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 995071385203806109, guid: 08230cb82fa9da14585101484e80cb21, type: 3}
       propertyPath: m_LocalPosition.z
