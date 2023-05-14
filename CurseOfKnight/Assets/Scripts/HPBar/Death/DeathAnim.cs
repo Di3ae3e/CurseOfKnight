@@ -13,6 +13,6 @@ public class DeathAnim : MonoBehaviour
 
     static public void Death(ref Animator anim)
     {
-        anim.SetTrigger("dearh");
+        anim.SetTrigger("death");
     }
 }

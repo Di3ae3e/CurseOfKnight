@@ -13,16 +13,24 @@ public class PlayerMove : MonoBehaviour
 
     public Animator animator;
 
+    private UnityEngine.Object dash;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        dash = Resources.Load("Dash");
+
     }
 
     void Update()
     {
         Walk();
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            GameObject dashRef = (GameObject)Instantiate(dash);
+            dashRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             Push();
+        }
         animator.SetFloat("Speed", Mathf.Abs(moveVector.y));
     }
 
