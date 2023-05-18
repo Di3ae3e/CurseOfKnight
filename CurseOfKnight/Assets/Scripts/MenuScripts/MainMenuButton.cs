@@ -14,6 +14,7 @@ public class MainMenuButton : MonoBehaviour
     public void LoadOtherScenes(int numOtherScene)
     {
         SceneManager.LoadScene(numOtherScene);
+        Time.timeScale = 1f;
     }
 
     public void Exit()

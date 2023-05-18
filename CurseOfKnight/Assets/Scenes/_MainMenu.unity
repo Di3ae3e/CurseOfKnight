@@ -852,8 +852,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939081424}
         m_TargetAssemblyTypeName: MainMenuButton, Assembly-CSharp
-        m_MethodName: LoadPlayScenes
-        m_Mode: 1
+        m_MethodName: LoadOtherScenes
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
